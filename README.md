@@ -1,22 +1,93 @@
-# Yoga
+# Yoga App - iOS
 
-An app for Yoga teachers and students who pratice yoga.
+iOS application for yoga teachers and students to find and schedule classes by location with real-time booking.
 
-  This app makes it easier for people to find classes at there location,
-and for teachers to post there classes where ever and when ever they like.
+## Features
 
-[Presentation of the app. ](https://drive.google.com/open?id=1fSKT1NVae6HZzSgNr0aUvSurupQcIUeG "YogaLessons.ppt")
-[video](https://drive.google.com/file/d/1kwjN-YHFLsfywtZr26JGrlhaco0VbHy6/view?usp=sharing)
-------
+- **Location-based Search**: Find yoga classes near you
+- **Real-time Scheduling**: Book classes instantly
+- **Teacher Profiles**: Browse instructor details and specialties
+- **Class Types**: Filter by yoga style (Hatha, Vinyasa, Kundalini, etc.)
+- **Schedule Management**: Manage your bookings and favorites
+- **Ratings & Reviews**: Community feedback on classes
+- **Push Notifications**: Get reminders for upcoming classes
+- **In-app Payments**: Secure payment processing
 
-# Pods used in this project:
+## Tech Stack
 
-* [Reachability](https://github.com/ashleymills/Reachability.swift)
-* [SDWebImage](https://github.com/SDWebImage/SDWebImage)
-* [Firebase](https://github.com/firebase/firebase-ios-sdk)
-* [LocationPickerViewController](https://github.com/almassapargali/LocationPicker)
-* [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)
-* [iOSDropDown](https://github.com/jriosdev/iOSDropDown)
-* [UnsplashPhotoPicker ~> 1.0](https://github.com/unsplash/unsplash-photopicker-ios)
+- **Language**: Swift
+- **Framework**: UIKit / SwiftUI
+- **Backend**: Firebase
+- **Maps**: Apple Maps / Google Maps SDK
+- **Payments**: Stripe or Apple Pay
+- **Analytics**: Firebase Analytics
 
-Also used [Currency layer](https://currencylayer.com/) for currency conversion.
+## Project Structure
+
+```
+├── App/
+│   ├── Views/              # SwiftUI views
+│   ├── ViewModels/         # MVVM view models
+│   ├── Models/             # Data models
+│   ├── Services/           # Network & Firebase services
+│   └── Utilities/          # Helper functions
+├── Assets/                 # Images, colors, strings
+└── YogaApp.swift          # App entry point
+```
+
+## Getting Started
+
+### Requirements
+
+- Xcode 14+
+- iOS 14+
+- CocoaPods or SPM
+
+### Installation
+
+```bash
+# Install dependencies
+pod install
+
+# Open workspace
+open YogaApp.xcworkspace
+```
+
+### Configuration
+
+1. Add Firebase config to `GoogleService-Info.plist`
+2. Configure location permissions in `Info.plist`
+3. Add API keys for maps and payments
+
+## Features in Detail
+
+### Class Discovery
+- Search by location, style, and time
+- Filter by teacher level and class duration
+- Save favorite classes and teachers
+
+### Booking System
+- One-tap booking with confirmation
+- View class calendar
+- Get cancellation details and refund policies
+
+### Class Reminders
+- Push notifications 24 hours before
+- In-app reminders
+- Calendar integration
+
+### Teacher Tools
+- Manage class schedule
+- View student roster
+- Communicate with students
+
+## API Endpoints
+
+- `GET /classes?location=lat,lng` - Find nearby classes
+- `POST /bookings` - Book a class
+- `GET /teachers/:id` - Get teacher profile
+- `GET /schedules/:classId` - Get class schedule
+
+---
+
+**Namaste - Connect with yoga near you** 🧘‍♀️
